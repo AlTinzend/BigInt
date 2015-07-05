@@ -13,11 +13,12 @@ class BigInt{
 	//BigInt();
 public:
 		string sumInt(string, string);
-		string multInt(string, string);
+		string subInt(string, string);
+		string multXInt(string, string);
 		
 private:
 		int whileInt(vector<int>&);
-
+		string vecToString(vector<int>&);
 };
 
 #endif
