@@ -4,17 +4,25 @@
 int main()
 {
 	BigInt add;
-	int g;
-	string sum1, sum2;
-	vector<int> vec;
-	//for(unsigned int i = 0; i < 2; ++i){}
-	while(sum1 != "x"){
-		cout<<"Enter two large integers:";
-		cin>>sum1>>sum2;
-		cout<<add.sumInt(sum1, sum2); 
-		cout<<endl;
-		cout<<add.multInt(sum1, sum2);
-		cout<<endl;
+	char action;
+	string num1, num2;
+	while(num1 != "x"){
+		cout<<"Enter two large integers seperated by operand(+,-,*):"<<endl;
+		cin>>num1>>action>>num2;
+			if(action == '+'){
+				cout<<add.sumInt(num1, num2);
+				cout<<endl;
+			}
+			else if(action == '-'){
+				cout<<add.subInt(num1, num2);
+				cout<<endl;
+			}
+			else if(action == '*'){
+				cout<<add.multXInt(num1, num2);
+				cout<<endl;
+			}
+			else{cout<<"Error unknown request.\n";}
+		
 	}
 	cout<<endl;
 	system ("pause");
